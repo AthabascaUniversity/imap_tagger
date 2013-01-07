@@ -1,5 +1,5 @@
-imap_tagger
-===========
+Intro
+=====
 
 IMAP tagger - tag you mail on IMAP server based on regexp in cases when server/clients don't support regexp filters
 
@@ -40,4 +40,16 @@ Sample config file::
     ...
     [yet_another_config]
     ...
+
+Invocation
+==========
+
+There are two modes: 
+
+* ThunderBird+FiltaQuilla+imap_tagger
+* Standalone
+
+First mode will use "run file" function of FiltaQuilla invoking imap_tagger with config name (section name) and Message-id header contents. This mode doesn't use "subject" match string as Message ID has been already provided.
+
+Second mode is "automatic" - it will search through the mailbox for Subject line matches first, then will attempt running regexp agains body of the message (that excludes headers etc.) and on successfull match - will apply provided tag (FLAG in IMAP parlance).
 
