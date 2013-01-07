@@ -1,0 +1,21 @@
+[DEFAULT]
+default=myfavorite
+
+[myfavorite]
+; Account auth information:
+host=imap.some.com
+username=me@imap.com
+password=MyPasswordAtImapDotCom
+
+; comma-separated list of folders to search
+folders=INBOX
+
+; Simple string-match filter to run for subject lines
+; when invoked with no message-id
+subject=SimpleString
+; RegExp to check against message body
+regexp=My.Reg.Exp.*goes.*here
+; Tag (FLAG) to apply to message on RegExp match
+tag=MyTag
+
+
