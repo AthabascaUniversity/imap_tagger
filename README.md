@@ -53,3 +53,4 @@ First mode will use "run file" function of FiltaQuilla invoking imap_tagger with
 
 Second mode is "automatic" - it will search through the mailbox for Subject line matches first, then will attempt running regexp agains body of the message (that excludes headers etc.) and on successfull match - will apply provided tag (FLAG in IMAP parlance).
 
+Script will attempt locating tagger.cfg in current directory or ~/.tagger.cfg if present.
